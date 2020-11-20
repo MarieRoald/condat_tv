@@ -1,11 +1,23 @@
 # CondatTV
 
+Cython wrapper for the efficient TV denoising algorithm by [Laurent Condat](https://lcondat.github.io/). This wrapper wraps Condats C implementation of the algorithm for use with NumPy.
 
-Cython wrapper for the efficient TV denoising algorithm by Condat.
+The algorithm this code uses is the improved fast total variation algorithm.
+The original C and MATLAB code is available on the [software page](https://lcondat.github.io/software.html) of Laurent Condat's [webpage](https://lcondat.github.io/).
 
-The algorithm is the improved fast total variation algorithm.
-MATLAB and C-code is available on Condat's [webpage](https://lcondat.github.io/software.html)
+## Installation instructions
 
+To install these bindings, you should have a C-compiler installed on your system. Make sure you have [NumPy](https://numpy.org/install/) and [Cython](https://cython.readthedocs.io/en/latest/src/quickstart/install.html) installed beforehand (both packages come with Anaconda by default) and write
+
+```
+pip install condat-tv
+```
+
+in your terminal window. In case that does not work, you can install it directly from github by running the command
+
+```
+pip install git+https://github.com/yngvem/condat_tv.git
+```
 
 
 ## Example of denoising with total variation minimization
@@ -18,6 +30,7 @@ import condat_tv
 import numpy as np
 import matplotlib.pyplot as plt
 ```
+
 
 ### Generate syntetic data
 
