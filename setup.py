@@ -8,9 +8,9 @@ import numpy as np
 import platform
 
 if platform.system() == 'Windows':
-	extra_args = ['/openmp', '/O3']
+	extra_args = ['/O3']
 else:
-	extra_args = ['-fopenmp', '-O3', '-ffast-math']
+	extra_args = ['-O3']
 
 extensions = [
     Extension(
